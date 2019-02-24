@@ -1,0 +1,225 @@
+html {
+  min-width: 400px;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0df;
+  background: linear-gradient(to right, #37d, #0df);
+}
+body.dark {
+  background: #056;
+  background: linear-gradient(to right, #125, #056);
+}
+
+nav {
+  z-index: 500;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  height: 70px;
+  line-height: 70px;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 35px;
+}
+nav.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+nav > span {
+  line-height: 70px;
+  display: block;
+  cursor: pointer;
+  width: 70px;
+  height: 70px;
+  display: inline-block;
+}
+nav > span > a {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 70px;
+  color: #fff;
+  text-decoration: none;
+}
+nav > span:hover, .block > .next:hover {
+  background-color: #111;
+  background-color: rgba(238, 136, 238, 0.3);
+}
+nav > span:active, .block > .next:active {
+  background-color: #222;
+  background-color: rgba(238, 136, 238, 0.9);
+}
+nav > .logo {
+  color: #e8e;
+  font-weight: bold;
+}
+
+main {
+  margin: auto;
+  max-width: 1000px;
+}
+main > article, main > div {
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+body.dark > main > article, body.dark > main > div {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+}
+main a {
+  color: #606;
+  text-decoration: none;
+}
+main a:hover {
+  text-decoration: underline;
+}
+main.dark a, footer > a {
+  color: #e8e;
+}
+main > article {
+  width: 100%;
+  padding: 20px 0px 20px 0px;
+  line-height: 25px;
+}
+article > h1, article > h2, article > h3, article > h4 {
+  padding: 30px 20px 0px 30px;
+}
+article > p {
+  padding: 5px 20px 5px 20px;
+}
+article > pre {
+  margin: 20px 20px 20px 20px;
+}
+article > p > code, article > pre {
+  background-color: #eee;
+  color: #000;
+  padding: 0.1em;
+  border-radius: 4px;
+}
+
+footer {
+  color: #e8e;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  height: 35px;
+  line-height: 35px;
+  margin-top: 35px;
+}
+
+body.dark img, body.dark picture {
+  filter: brightness(80%);
+  cursor: pointer;
+}
+img.wide, picture.wide {
+  width: 100%;
+}
+img.insert, picture.insert {
+  margin: 20px 20px 20px 20px;
+  width: 80%;
+  width: calc(100% - 40px);
+}
+img.vertical, picture.vertical {
+  max-width: 100%;
+  width: auto;
+  max-height: 80vh;
+}
+img.profile, picture.profile {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+img.center, picture.center {
+  margin: auto;
+  display: block;
+}
+body.dark img:active, body.dark picture:active {
+  filter: none;
+}
+
+span.insert {
+  height: 35px;
+  line-height: 35px;
+  width: 100%;
+  display: inline-block;
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+}
+span.insert > a {
+  color: #fff;
+}
+
+.block {
+  border: 1px solid #fff;
+  height: 150px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  max-width: 800px;
+}
+.block-min {
+  border: 1px solid #fff;
+  height: 75px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  max-width: 800px;
+}
+.block-min > h1 {
+  width: 100%;
+  height: 75px;
+  line-height: 75px;
+  margin: 0;
+  text-align: center;
+}
+.block > img, .block > div {
+  display: inline-block;
+  float: left;
+}
+.block > img {
+  object-fit: cover;
+  object-position: center;
+  width: 40%;
+  height: 150px;
+}
+.block > div {
+  padding: 20px 20px 20px 20px;
+  width: calc(60% - 80px);
+  height: 110px;
+  overflow-y: auto;
+}
+.block > div > b {
+  font-size: 15px;
+}
+.block > .next {
+  display: inline-block;
+  width: 40px;
+  height: 150px;
+  line-height: 150px;
+  text-align: center;
+}
+
+.color-primary, a.active {
+  color: #e8e;
+}
+
+.noselect, img, picture {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+.hidden, .loading {
+  visibility: hidden;
+}
+.none, .none::before, .none::after {
+  display: none;
+}
+.next {
+  cursor: pointer;
+}
