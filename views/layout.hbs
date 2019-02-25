@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="{{site.lang}}" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{site.name}}{{#if title}} - {{title}}{{/if}}</title>
+    <link rel="stylesheet" href="/static/master.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  </head>
+  <body class="{{#if site.theme.dark}}dark{{/if}}">
+    <nav class="noselect sticky">
+      <span> <a href="/" class="{{#pageIs site.page.a}}active {{/pageIs}}fas fa-home"></a></span>
+      <span> <a href="/projects/" class="{{#pageIs site.page.b}}active {{/pageIs}}fas fa-laptop-code"></a></span>
+      <span class="logo"><span id="logo_l" {{#if site.logo.class}}class="{{site.logo.class}}"{{/if}}>{{#if site.logo.letter}}{{site.logo.letter}}{{/if}}</span>{{#if site.theme.auto}}<i id="logo_i" class="none fas fa-moon"></i>{{/if}}</span>
+      <span> <a href="/blog/" class="{{#pageIs site.page.c}}active {{/pageIs}}fas fa-camera-retro"></a></span>
+      <span> <a href="/contact-me/" class="{{#pageIs site.page.d}}active {{/pageIs}}fas fa-address-book"></a></span>
+    </nav>
+    <main oncontextmenu="return false;">
+      {{{body}}}
+    </main>
+    <footer class="noselect">
+      Made with <i class="fas fa-laptop-code"></i> on <a href="https://github.com/stefanovazzocell/Fluent" rel="noreferrer" target="_blank">GitHub</a>
+    </footer>
+    <script src="/static/script/njq.js" charset="utf-8" defer></script>
+    {{#if site.theme.auto}}{{#if site.theme.save}}<script src="/static/script/darkmode_save.js" charset="utf-8" defer></script>{{else}}<script src="/static/script/darkmode.js" charset="utf-8" defer></script>{{/if}}{{/if}}
+  </body>
+</html>

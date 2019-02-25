@@ -78,7 +78,7 @@ main a {
 main a:hover {
   text-decoration: underline;
 }
-main.dark a, footer > a {
+body.dark article a, footer > a {
   color: #e8e;
 }
 main > article {
@@ -195,7 +195,7 @@ span.insert > a {
   overflow-y: auto;
 }
 .block > div > b {
-  font-size: 15px;
+  font-size: 20px;
 }
 .block > .next {
   display: inline-block;

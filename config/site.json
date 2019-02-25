@@ -1,0 +1,22 @@
+{
+  "lang": "en",
+  "logo": {
+    "letter": "F",
+    "class": ""
+  },
+  "name": "Fluent",
+  "theme": {
+    "dark": false,
+    "auto": true,
+    "save": true
+  },
+  "page": {
+    "a": "",
+    "b": "projects",
+    "c": "blog",
+    "d": "contact-me"
+  },
+  "server": {
+    "port": 80
+  }
+}
